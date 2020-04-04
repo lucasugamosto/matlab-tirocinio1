@@ -13,4 +13,5 @@ un controllo u(.) e sarà calcolato l'indice di costo Jv. (L'INDICE DI COSTO DIM
 dove sull'asse delle ascisse vi è il valore v (che indica il tempo discreto), mentre sull'asse delle ordinate il valore di Jv.
 
 - 4. La funzior "AndamentoU_X.m" mostra come varia il controllo u(.) e la corrispondente risposta dello stato x(.) per v che
-appartiene all'intervallo [0,v].
+appartiene all'intervallo [0,v]. Questa funzione è stata scritta per un sistema che ha come valore n (=n° righe di x(.) = n°
+di righe e di colonne di A = n° di righe di B) 2.
