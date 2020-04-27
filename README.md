@@ -1,4 +1,4 @@
-# matlab
+# matlab tirocinio1
 tirocinio1 di TdS sullo studio di un sistema a tempo discreto.
 
 - 1. La  funzione "TrovaControllo.m" calcola il controllo ottimale u(.), che consente di raggiungere lo stato finale
