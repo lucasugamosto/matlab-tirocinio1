@@ -4,27 +4,13 @@ function u = TrovaControllo(A,B,v,xf)
     dim_B = size(B);
     n = dim_A(1);
     p = dim_B(2);
-    %creazione della matrice P(A,B)
-    if n == 1
-        P = B;
-    elseif n == 2
-        P = [B A*B];
-    elseif n == 3
-        P = [B A*B (A^2)*B];
-    elseif n == 4
-        P = [B A*B (A^2)*B (A^3)*B];
-    elseif n == 5
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B];
-    elseif n == 6
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B (A^5)*B];
-    elseif n == 7
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B (A^5)*B (A^6)*B];
-    elseif n == 8
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B (A^5)*B (A^6)*B (A^7)*B];
-    elseif n == 9
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B (A^5)*B (A^6)*B (A^7)*B (A^8)*B];
-    elseif n == 10
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B (A^5)*B (A^6)*B (A^7)*B (A^8)*B (A^9)*B];
+    %creazione della matrice di raggiungibilità P(A,B)
+    P = [];
+    j = 0;
+    for i = 1:n
+        mat = (A^j)*B;
+        P = horzcat(P,mat);
+        j = j+1;
     end
     
     %controllo se sistema è raggiungibile
