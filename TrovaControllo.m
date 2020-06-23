@@ -35,26 +35,9 @@ function u = TrovaControllo(A,B,v,xf)
     end
     
     %eseguo passo 2 bis che permette di minimizzare l'indice di costo
-    if v == 1
-        P = B;
-    elseif v == 2
-        P = [B A*B];
-    elseif v == 3
-        P = [B A*B (A^2)*B];
-    elseif v == 4
-        P = [B A*B (A^2)*B (A^3)*B];
-    elseif v == 5
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B];
-    elseif v == 6
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B (A^5)*B];
-    elseif v == 7
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B (A^5)*B (A^6)*B];
-    elseif v == 8
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B (A^5)*B (A^6)*B (A^7)*B];
-    elseif v == 9
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B (A^5)*B (A^6)*B (A^7)*B (A^8)*B];
-    elseif v == 10
-        P = [B A*B (A^2)*B (A^3)*B (A^4)*B (A^5)*B (A^6)*B (A^7)*B (A^8)*B (A^9)*B];
+    P = [];
+    for i = 0:v-1
+        P = horzcat(P,(A^i)*B);
     end
     
     P_trasp = P';

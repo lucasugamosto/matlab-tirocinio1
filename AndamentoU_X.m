@@ -16,7 +16,7 @@ function AndamentoU_X(A,B,v_max,xf)
     
     %ANDAMENTO DI u(.) NELL'INTERVALLO [0,v] (con u(v) = 0)
     u = horzcat(u,0)
-    plot(v,u,"b--*","Linewidth",2);
+    plot(v,u,"b:o","Linewidth",2);
     
     %ANDAMENTO DI x(.) NELL'INTERVALLO [0,v] (con u(v) = 0)
     X = zeros(n,1);
@@ -30,10 +30,12 @@ function AndamentoU_X(A,B,v_max,xf)
     x
     x1 = x(1,:);
     x2 = x(2,:);
+    
+    %rappresentazione sul grafico dell'andamento dello stato x(k)
     hold on
-    plot(v,x1,"r--*","LineWidth",2);
+    plot(v,x1,"r-*","LineWidth",2);
     hold on
-    plot(v,x2,"g--*","LineWidth",2);
+    plot(v,x2,"g-*","LineWidth",2);
     
     title("andamento di u(.) e x(.)");
     xlabel("tempo discreto v");

@@ -21,5 +21,7 @@ function Jv = CalcolaIndiciDiCosto(A,B,v_max,xf)
             end
             Jv = horzcat(Jv,val_J);
         end
+        fprintf("Jv per v = 2...%d :\n",v_max);
+        Jv
     end
 end

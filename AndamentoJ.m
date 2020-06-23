@@ -12,8 +12,8 @@ function AndamentoJ(A,B,v_max,xf)
     %contenente i valori di J al variare di v
     J = CalcolaIndiciDiCosto(A,B,v_max,xf);
     
-    plot(v,J,"r:*","LineWidth",2);
+    plot(v,J,"r-o","LineWidth",2.5);
     title("andamento di J");
-    xlabel("tempo discreto v");
+    xlabel("tempo discreto v [s]");
     ylabel("indice di costo J");
 end
